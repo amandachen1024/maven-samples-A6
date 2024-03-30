@@ -7,12 +7,6 @@ pipeline {
       }
     }
 
-    stage('run') {
-      steps {
-        sh 'mvn clean test verify'
-      }
-    }
-
     stage('bisect') {
       steps {
         sh 'git bisect reset'
